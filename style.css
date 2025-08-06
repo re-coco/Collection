@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 600;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.user-section {
+    margin-bottom: 3rem;
+}
+
+.user-section h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.sites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.site-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #e0e0e0;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.site-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 123, 255, 0.2);
+    border-color: #007bff;
+}
+
+.site-thumbnail {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #333;
+}
+
+.site-info {
+    padding: 1rem 1.25rem;
+}
+
+.site-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}

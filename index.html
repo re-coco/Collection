@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>バイブコーディング作品集</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>バイブコーディング作品集</h1>
+    </header>
+    <main id="collection-container">
+        <!-- 作品はここに動的に読み込まれます -->
+    </main>
+    <footer>
+        <p>作品を追加したい場合は、このHTMLファイルを編集してください。</p>
+    </footer>
+    <script>
+        const siteData = [
+            {
+                "username": "murakamiyoshiyuki",
+                "sites": [
+                    { "title": "炎上シュミレーター", "url": "https://murakamiyoshiyuki.github.io/enjou/" },
+                    { "title": "賞賛シュミレーター", "url": "https://murakamiyoshiyuki.github.io/syousan/" },
+                    { "title": "気持ち悪いストップウォッチ群", "url": "https://murakamiyoshiyuki.github.io/stopwatch0717/" },
+                    { "title": "LP、HP、プロンプトジェネレーター", "url": "https://murakamiyoshiyuki.github.io/vibecodeinggen/" },
+                    { "title": "タイムアタックストップウォッチ", "url": "https://murakamiyoshiyuki.github.io/ge-mu/" },
+                    { "title": "ワキーンの逆襲", "url": "https://murakamiyoshiyuki.github.io/wakyeeeens/" },
+                    { "title": "ドローンショー・デモ", "url": "https://murakamiyoshiyuki.github.io/drone_show/" },
+                    { "title": "Google拡張機能でQRコード", "url": "https://www.canva.com/design/DAGuvDfqC7U/TT43lIebTJTp0GkAclgoIg/view" },
+                    { "title": "mamiyoband.com", "url": "https://mamiyoband.com/" }
+                ]
+            },
+            {
+                "username": "polyyuki",
+                "sites": [
+                    { "title": "他者貢献スロットマシーン", "url": "https://polyyuki.github.io/slotmachine/" },
+                    { "title": "「チーム他者貢献ズ」の情報共有ハブメルボルンマラソン2025へ", "url": "https://polyyuki.github.io/MelbourneMarathon2025/" },
+                    { "title": "クラウドファンディング講座LP", "url": "https://polyyuki.github.io/Bushi-seminar/lp_crowdfunding_course/index.html" },
+                    { "title": "100日でフルマラソン完走する裏技ガイド", "url": "https://polyyuki.github.io/100Days-Full-Marathon-guide/100days-marathon-lp-static/" },
+                    { "title": "朝マックゲーム", "url": "https://polyyuki.github.io/Morning-Mac/" }
+                ]
+            },
+            {
+                "username": "yukonjuly8",
+                "sites": [
+                    { "title": "キラキラストップウォッチ", "url": "https://yukonjuly8.github.io/stop-watch2-/" },
+                    { "title": "yukonjuly8.ストップウォッチ", "url": "https://yukonjuly8.github.io/stop-watch/" }
+                ]
+            },
+            {
+                "username": "takuyataniguchi-jpg",
+                "sites": [
+                    { "title": "色相チェッカー", "url": "https://takuyataniguchi-jpg.github.io/sikisouapuri1/" },
+                    { "title": "だもの診断アプリ", "url": "https://takuyataniguchi-jpg.github.io/damonomaker/" },
+                    { "title": "朝マック食べたいどん！タイマー", "url": "https://takuyataniguchi-jpg.github.io/stopwatch2/" },
+                    { "title": "どうぶつぷよ", "url": "https://takuyataniguchi-jpg.github.io/ochige-/" }
+                ]
+            },
+            {
+                "username": "wakeeen",
+                "sites": [
+                    { "title": "ワキーンストップウォッチ", "url": "https://wakeeen.github.io/stopwacth/" }
+                ]
+            },
+            {
+                "username": "re-coco",
+                "sites": [
+                    { "title": "レーコ。8/31ライブ　カウントダウンカレンダー", "url": "https://re-coco.github.io/0717_lesson3_countdown/" },
+                    { "title": "サイバーストップウォッチ", "url": "https://re-coco.github.io/0706_1522/" },
+                    { "title": "ハッピーバースデーむらかみ", "url": "https://re-coco.github.io/HB0707/" },
+                    { "title": "ヤマタノオロチたたき", "url": "https://re-coco.github.io/0722_game/" }
+                ]
+            },
+            {
+                "username": "domiringo55",
+                "sites": [
+                    { "title": "AAA_Chan　ストップウォッチ①", "url": "https://domiringo55.github.io/STOP-WATCH/" },
+                    { "title": "AAA_Chan　ストップウォッチ②cats TIMER", "url": "https://domiringo55.github.io/CATS-timer/" }
+                ]
+            },
+            {
+                "username": "manahill2020",
+                "sites": [
+                    { "title": "manahill2020.ストップウォッチ", "url": "https://manahill2020.github.io/stopwatching/" }
+                ]
+            },
+            {
+                "username": "hagedango",
+                "sites": [
+                    { "title": "ハゲ運勢おみくじ", "url": "https://hagedango.github.io/hagekuji/" },
+                    { "title": "Noto Friendly Passport Project　LP", "url": "https://hagedango.github.io/noto-matsuri/" }
+                ]
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('collection-container');
+            if (!container) {
+                console.error('Error: collection-container element not found.');
+                return;
+            }
+
+            siteData.forEach(user => {
+                if (user.sites.length === 0) return;
+
+                const userSection = document.createElement('section');
+                userSection.className = 'user-section';
+
+                const userName = document.createElement('h2');
+                userName.textContent = user.username;
+                userSection.appendChild(userName);
+
+                const sitesGrid = document.createElement('div');
+                sitesGrid.className = 'sites-grid';
+
+                user.sites.forEach(site => {
+                    const cardLink = document.createElement('a');
+                    cardLink.className = 'site-card';
+                    cardLink.href = site.url;
+                    cardLink.target = '_blank';
+                    cardLink.rel = 'noopener noreferrer';
+
+                    const thumbnailUrl = `https://s.wordpress.com/mshots/v1/${encodeURIComponent(site.url)}?w=400`;
+                    
+                    const thumbnail = document.createElement('div');
+                    thumbnail.className = 'site-thumbnail';
+                    thumbnail.style.backgroundImage = `url('${thumbnailUrl}')`;
+
+                    const info = document.createElement('div');
+                    info.className = 'site-info';
+
+                    const title = document.createElement('h3');
+                    title.textContent = site.title;
+
+                    info.appendChild(title);
+                    cardLink.appendChild(thumbnail);
+                    cardLink.appendChild(info);
+                    sitesGrid.appendChild(cardLink);
+                });
+
+                userSection.appendChild(sitesGrid);
+                container.appendChild(userSection);
+            });
+        });
+    </script>
+</body>
+</html>
